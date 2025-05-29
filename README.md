@@ -12,8 +12,8 @@ Uma aplicação moderna construída com [Next.js](https://nextjs.org/), focada e
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/seunome/seuprojeto-next.git
-cd seuprojeto-next
+git clone https://github.com/ArthurOliv2/motolink.git
+cd motolink
 ```
 
 2. **Instale as dependências**
