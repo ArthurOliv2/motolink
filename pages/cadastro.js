@@ -32,11 +32,14 @@ export default function CadastroPage(){
             event.preventDefault()
             const response = await fetch(`/api/user/cadastro`, {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'aplication/json'
+                },
                 body: JSON.stringify(formData)
             })
 
             const json = await response.json()
-            if (response.status !== 201) throw new Error(json)
+            if (response.status !== 201) throw new Error(json.message || 'Erro ao cadastrar')
 
             setCookie('authorization', json)
             router.push('/')

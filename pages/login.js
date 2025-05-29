@@ -28,17 +28,27 @@ export default function LoginPage(){
     const handleForm = async (event) => {
         try {
             event.preventDefault()
+
             const response = await fetch(`/api/user/login`, {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'aplication/json'
+                },
                 body: JSON.stringify(formData)
             })
 
             const json = await response.json()
-            if (response.status !== 200) throw new Error(json)
+            console.log('Resposta da API de login:', json)
+            if (response.status !== 200) throw new Error(json.message || 'Erro ao fazer login')
 
-            setCookie('authorization', json)
+            setCookie('authorization', json.token)
+            console.log('cookie setado com sucesso')
+
             router.push('/')
+            console.log('redirecionando para /')
+            
         } catch (err) {
+            console.error('erro ao logar:', err.message)
             setError(err.message)          
         }
     }

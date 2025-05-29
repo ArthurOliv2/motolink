@@ -1,8 +1,7 @@
 import { getCookie } from "cookies-next"
-import { useEffect } from "react"
+
 import { verifica } from "../services/user"
 import Error from "next/error"
-import { redirect } from "next/dist/server/api-utils"
 
 export default function Home() {
   return (
@@ -15,6 +14,8 @@ export default function Home() {
 export const getServerSideProps = async ({ req, res }) => {
     try {
         const token = getCookie('authorization', { req, res })
+        console.log('token recebido no index:', token)
+
         if (!token) throw new Error('Token Inválido')
 
         verifica(token)
@@ -22,6 +23,7 @@ export const getServerSideProps = async ({ req, res }) => {
             props: {}
         }
     } catch (err) {
+        console.log('redirecionamento por erro no token:', err.message)
         return {
             redirect: {
                 permanent: false,
