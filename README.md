@@ -1,14 +1,6 @@
-# 🚀 Projeto Next.js: Nome do Projeto
+# 🚀 Projeto Next.js: Motolink
 
 Uma aplicação moderna construída com [Next.js](https://nextjs.org/), focada em desempenho, escalabilidade e experiência de desenvolvedor.
-
-## ✨ Funcionalidades
-
-- ✅ Renderização SSR e SSG com Next.js
-- 💅 Estilização com Tailwind CSS
-- 🌐 Integração com API externa
-- 🔐 Autenticação com JWT/Auth.js
-- 📦 Pronto para deploy em Vercel ou Docker
 
 ## 🧰 Tecnologias Utilizadas
 
