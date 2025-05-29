@@ -12,3 +12,8 @@
     justify-content: center;
     gap: 10px;
 }
+
+.error {
+    color: red;
+    font-weight: bold;
+}

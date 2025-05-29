@@ -11,7 +11,7 @@ export default function LoginPage(){
         <div className={styles.background}> 
             
             <LoginCard title="Entre sua conta">
-                <Image src="/motorbike-removebg-preview.png" width={80} height={80} style={{ filter: 'invert(1)' }}/>
+                <Image src="/motorbike.png" width={80} height={80} style={{ filter: 'invert(1)' }}/>
                 <form className={styles.form}>
                     <Input type="email" placeholder="Seu e-mail" />
                     <Input type="password" placeholder="Sua Senha" />
